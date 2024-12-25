@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachable1</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px solid white;
+            display: flex;
+            height: 90px;
+            justify-content: center; 
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap; 
+            flex-flow: row wrap;
+            
+        }
+        .items{
+            border: 2px solid white;
+            height: 50px;
+            display: flex;
+            margin: 4px;
+            flex-wrap: wrap; 
+            flex-flow: row wrap;
+            padding: 15px;
+            font-size: 18px;
+
+        }
+    
+        .items1{
+            border: 2px solid white;
+            height: 50px;
+            display: flex;
+            margin: 4px;
+            flex-wrap: wrap; 
+            flex-flow: row wrap;
+            padding: 15px;
+            font-size: 22px;
+            cursor: pointer ;
+        
+        }
+        .c1{
+            
+            border: 2px solid white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+        }
+        .c2{
+            border: 2px solid white;
+            height: 50px;
+            display: flex;
+            flex-wrap: wrap; 
+            flex-grow: 0.12;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        #i1{
+            flex-grow: 0.12;
+            
+        }
+        .button {
+            /* Regular styles */
+            background-color: #03643f; /* Blue background color */
+            color: #fff; /* White text color */
+            padding: 10px 20px; /* Padding for internal spacing */
+            border: none; /* Remove default button border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+        .button1 {
+            /* Regular styles */
+            background-color: #25df97; /* Blue background color */
+            color: black; /* White text color */
+            padding:10px 20px; /* Padding for internal spacing */
+            border: none; /* Remove default button border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Change cursor to pointer */
+            height: 60px;
+            width: 180px;
+            font-size: 20px;
+        }
+        .button3 {
+            /* Regular styles */
+            background-color: black; /* Blue background color */
+            color: white; /* White text color */
+            padding:10px 20px; /* Padding for internal spacing */
+            border: none; /* Remove default button border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Change cursor to pointer */
+            height: 60px;
+            width: 180px;
+            font-size: 20px;
+        }
+        .container2{
+            display: flex;
+            position: relative;
+        }
+        #i2{
+            padding-top: 99px;
+            padding-left: 200px;
+            position: absolute;
+            top: 25px;
+            z-index: 1;
+        }
+        #i3{
+            padding-top: 280px;
+            padding-left: 100px;
+            font-size: 80px;
+          
+        }
+        #i4{
+            padding-top: 100px;
+            padding-left: 100px;
+            font-size: 25px;
+          
+        }
+        #ii1{
+            font-size: 18px;
+        }
+        #ol{
+            font-size: 15px;
+        }
+        .c2b{
+            display: flex;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        #email{
+            width: 380px;
+        }
+
+        .box{
+            border: 2px solid white;
+            background: rgba(11, 121, 92, 0.174);
+            display: flex;
+            height: 80vh;
+            justify-content: center; 
+            align-items: center;
+            justify-content: space-between; 
+            flex-wrap: wrap; 
+            flex-flow: row wrap;
+        }
+        .jk{
+            padding-left: 780px;
+        }
+        .boxitem1{
+            padding-left: 194px;
+            font-size: 25px;
+        }
+        .boxitem2{
+            padding-right: 194px;
+            font-size: 22px;
+        }
+        #b2:hover{
+            cursor:pointer;
+            color: #03643f;
+        }
+        #lo
+        {
+            font-size: 60px;
+            color: #03643f;
+        }
+
+        .container3{
+            padding-top: 200px;
+            background-color: rgba(255, 235, 205, 0.26);
+            padding-bottom: 180px;
+        }
+
+        .c31{
+            justify-content: center;
+            font-size: 25px;
+            align-items:center ;
+            color: #03643f;
+            padding-left:650px ;
+            
+        }
+        .c32{
+            color: black;
+            font-size: 22px;
+            padding-left: 450px;
+           
+        }
+
+        .cimg{
+            display: flex;
+            justify-content: center;
+            padding-top: 80px;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .c3items{
+            border: 2px solid white;
+            justify-content: space-between;
+            height: 500px;
+            width: 220;
+            padding-left: 25px;
+            justify-content: left;
+            background-color: white;
+            font-size: 20px;
+            color: #03643f;
+        }
+        
+        .c3items:hover{
+            border: 2px solid red;
+            justify-content: space-between;
+            height: 500px;
+            width: 220;
+            padding-left: 25px;
+            justify-content: left;
+            background-color: white;
+            font-size: 20px;
+            color: #03643f;
+            margin-top: -40px;
+            transform: scaleX(40px);
+        }
+        
+
+        .c3p:hover{
+            cursor: pointer;
+            color: blue;
+            
+        
+        }
+        .c4b1{
+            color: white;
+            padding-left: 50px;
+            font-size: 30px;
+        }
+
+        .container4{
+            padding-top: 120px;
+            border: 2px solid ;
+           
+            background-color: #0c3b2be2;
+            
+        }
+        #c4p1{
+            cursor: pointer;
+            font-size: 30px;
+            border: 2px;
+            width: 190px;
+        }
+        #c4p1:hover{
+            cursor: pointer;
+            font-size: 40px;
+            columns: aqua;
+        }
+
+        .cv{
+            display: flex;
+            justify-content:space-evenly;
+        }
+        .c4b2{
+            border: 2px solid  #03643f;
+            font-size: 25px;
+            padding-left: 50px;
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            background-color: white;
+            align-items: center;
+        }
+        #fo{
+            padding-top: 50px;
+            font-size: 100px;
+            color: #03643f;
+        }
+        #c4i5{
+            padding-top: 90px;
+        }
+
+        .c5{
+            display: flex;
+            padding-top: 20px;
+            padding-left: 300px;
+            font-size: 20px;
+        }
+        .container5{
+            padding-top: 150px;
+            background-color: rgba(255, 235, 205, 0.135);
+            padding-bottom: 180px;
+        }
+
+        .c5items{
+            font-size: 22px;    
+        }
+
+        .container6{
+            background-color: rgba(0, 0, 0, 0.863);
+            padding-top: 150px;
+
+        }
+        .c6b1{
+            color: #fff;
+            font-size: 25px;
+            align-items: center;
+            padding-left: 500px;
+        }
+        #c6h1{
+            padding-left: 50px;
+            font-size: 30px;
+        }
+        #c6p1{
+            padding-top: 30px;
+            font-size: 25px;
+        }
+        #c6h4{
+            padding-top: 30px;
+            padding-left: 185px;
+        }
+        #c6h4:hover{
+            cursor: pointer;
+        }
+
+        .c6b2{
+            display: flex;
+            padding-top: 90px;
+            padding-left: 200px;
+        }
+
+        #c6b1i1{
+            padding-left: 500px;
+        }
+        #c6b2cont{
+            padding-left: 150px;
+            color: white;
+            font-size:20px ;
+        }
+
+        .c7b2{
+            display: flex;
+            padding-top: 90px;
+            padding-left: 15px;
+        }
+
+        .c8b2{
+            display: flex;
+            padding-top: 90px;
+            padding-left: 200px;
+        }
+        .c8button{
+            padding-top: 150px;
+            padding-left: 700px;
+            padding-bottom: 80px;
+        }
+        .container9{
+            padding-top: 200px;
+            background-color: rgba(255, 235, 205, 0.26);
+            padding-bottom: 180px;
+        }
+        .c91{
+            justify-content: center;
+            font-size: 25px;
+            align-items:center ;
+            color: #03643f;
+            padding-left:370px ;
+            
+        }
+        .c92{
+            color: black;
+            font-size: 25px;
+            padding-left: 370px;
+            color: #03643f;
+           
+        }
+        .container10{
+            background-color: rgb(0, 255, 195);
+            font-size: 25px;
+        }
+        .content{
+            padding-left: 580px;
+            padding-top: 50px;
+        }
+        .c10d1{
+            font-size: 40px;
+            padding-left:-5px;
+        }
+        .c10d2{
+            font-size: 40px;
+            padding-left: 105px;
+        }
+        .c10d3{
+            font-size: 35px;
+        }
+
+        .container11{
+            background-color: black;
+        }
+        .c11d1{
+            padding-left: 200px;
+            padding-top: 50px;
+            color: white;
+            font-size: 22px;
+            display: flex;
+        }
+   
+
+    </style>
+</head>
+
+<body>
+    
+    <main>
+        <div class="container">
+            <div class="c1">
+                <div class="items" id="i1"><img src="Teachableimg.svg" alt="" height="25px" ></div>  
+                    <div class="items1">Product</div>
+                    <div class="items1">Solution</div>        
+                    <div class="items1">Resources</div>
+                    <div class="items1">Pricing</div>    
+            </div>
+            <div class="c2">
+                <li>Creator login</li>
+                <li><button class="button">Start for free</button></li>
+            </div>
+           
+        </div>
+    </main>
+ <hr>
+
+
+
+
+
+
+
+
+    <div class="container2">
+        <div id="i2"><img src="Teach2.jpg" alt="" height="800px" width="590px"></div>
+            <div class="jk">
+                    <div id="i3"><p>Sell without selling <br> out.</p> </div>
+
+                    <div id="i4"><p>You can monetize meaningfully (no, really) on Teachable. We <br> give you unmatched content creation and selling tools to build <br> best-in-class learning experiences.<p>
+                    </div>
+
+                    <div id="i4">
+                        <p id="ii1">Enter your email:</p>
+                        
+                        <div class="c2b">
+                        <input type="email" id="email" name="email" placeholder="Your email.." required>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="button1">Start for free</button>
+                        </div>
+                        
+                        <div id="ol"><p>*By submitting your email address, you agree to <br> Teachable's Terms of use and Privacy Policy.</p></div>
+                    </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="box">
+                <div class="boxitem1">
+                        <p id="lo">Escape the <br> algorithm</p><br>
+                        <p>Teachable is a no-code platform for creators who want <br> to build more impactful businesses through courses, <br> coaching, and digital downloads. Whether you’re going <br> viral on TikTok or bringing your in-person classes <br> online, with Teachable you own your <br> content and your students’ experience.</p><br>
+                        <button class="button1">Start for free</button> 
+                </div>
+                
+                
+                <div class="boxitem2">
+                        <img src="https://assets-global.website-files.com/65393b768d06ee4c16d24a0b/653a8da2a2f299321bf0ed72_escape-the-algorithm-teachable-webflow-template-p-500.jpg" alt=""><br><br>
+                        <p id="b2">Learn more about Teachable |></p>
+                </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="container3">
+                <div class="c31">
+                    <h1>More ways to sell</h1>
+                </div>
+                <div class="c32">
+                     <p > There’s no all-in-one formula for success as a creator. That’s why we let you choose how to <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;build your business.
+                    </p>
+                </div>
+
+
+                <div class="cimg">
+                        <div class="c3items"><img src="teach3.jpg" alt="" height="220px" width="320px"> <br>
+                        <h1>Online courses</h1><br>
+                        <p>Our intutive course builder gives <br>you the power to share what you <br>
+                        know.No coding or design skills <br>necessary.</p><br><br><p class="c3p">Learn more</p>
+                        
+                        
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="c3items"><img src="teach4.jpg" alt="" height="220px" width="320px">
+                            <h1>Digital downloads</h1><br>
+                            <p>Reach your audience with the  <br>content they want faster than ever. <br>
+                            Sell PDFs,audio clips,and more.</p><br><br><br><p class="c3p">Learn more</p>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="c3items"><img src="teach6.jpg" alt="" height="220px" width="320px">
+                            <h1>Coaching</h1><br>
+                            <p>Manage your coaching business <br>with milestones and scheduling,<br>
+                            plus,process payments all on <br>Teachable.</p><br><br><p class="c3p">Learn more</p>
+                        </div>
+                    </div>
+    </div>
+
+
+
+
+
+
+        <div class="container4">
+            <div class="cv">
+                <div class="c4b1">
+                    <h1>Free to start,<br>simple to scale</h1>
+                    <br>
+                    <p>Our free plan includes everything you need to begin <br> teaching and earning now. Upgrade later for additional <br> resources to support your business’s changing needs.
+                    </p><br><br>
+
+                    <p id="c4p1">Learn more</p>
+                </div>
+
+                <div class="c4b2">
+                    <h2>Free plan</h2>
+                    <br>
+                    <p>The foundational tools you need <br> to start earning today. No credit <br> card required.</p>
+
+                    <p id="fo">$0</p>
+                </div>
+            </div>
+
+            <div id="c4i5">
+                    <img src="teach5.jpg" alt="">
+            </div>
+
+        </div>
+
+    
+
+
+
+
+
+
+        <div class="container5">
+
+            <div class="c31">
+                <h1>Less stress. More results.</h1>
+            </div>
+            <div class="c32">
+                 <p > The tools you need to build, grow, and manage a thriving knowledge business are right here. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get started in three simple steps.
+                </p>
+            </div>
+
+            <div class="c5">
+                    <div class="c5items">
+                    <h1>1 <br>_________________ <br><br></h1>
+                    <h2>Prep your content</h2><br>
+                    <p>Outline your course, plan a coaching <br> program, or design a digital product <br> you’d like to upload and sell.</p>
+
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="c5items">
+                        <h1>2 <br>_________________ <br><br></h1>
+                        <h2>Price your product</h2><br>
+                        <p>Set prices for each of your offerings,<br> then use our simple sales page builder <br> to quickly create a place to send people <br> to purchase.</p>
+                        <br><br><button class="button1">Start for free</button> 
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="c5items">
+                        <h1>3 <br>_________________ <br><br></h1>
+                        <h2>Upload your content</h2><br>
+                        <p>Use our intuitive drag-and-drop builder <br> to create your product with videos,<br> slides, quizzes, and more</p>
+                    </div>
+                </div>
+        </div>
+
+
+
+
+
+
+    <div class="container6">
+            <div class="c6b1">
+
+                <div id="c6h1">
+                <h1>Unmatched features built <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to transform lives</h1>
+                </div>
+                
+                <div id="c6p1">
+                <p >We’ve spent years working with creators. The result? Features that help you scale and <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;give you peace of mind.</p>
+                </div>
+
+                <div id="c6h4">
+                 <h4 >View all product updates</h4>
+                </div>
+            
+            </div>
+
+            <div class="c6b2">
+
+                <div id="c6b2i1"><img src="teach7.jpg" alt="" height="450px"></div>
+
+                <div id="c6b2cont">
+                    <h1>Sell confidently, earn powerfully</h1><br>
+                    <p>Our robust suite of monetization tools—including upsells,<br> bundles, and order bumps—unlocks more value from every <br> product you create. With teachable:pay creators get:</p><br>
+                    <p> * Automated tax filings <br><br>
+                        * Fraud monitoring <br><br>
+                        * Chargeback support <br><br>
+                        * Ecommerce optimization tools</p>
+
+                </div>
+            
+            </div>
+
+
+
+
+            <div class="c7b2">
+
+                <div id="c6b2cont">
+                    <h1>Experience award-winning support</h1><br>
+                    <p>Paid plan subscribers can participate in a range of <br> support programs designed to help them succeed, <br> including:</p><br>
+                    <p> * Teachable:u business training courses <br><br>
+                        * Teachable:hq creator community membership <br><br>
+                    </p><br>
+                    <p>Our powerful accelerator challenges—available to <br> all subscribers—are designed to get your business <br> up and running in 30 days.</p>
+
+                </div>
+
+                <div id="c6b2i1"><img src="teach8.jpg" alt="" height="450px"></div>
+            
+            </div>
+
+
+
+            <div class="c8b2">
+
+                <div id="c6b2i1"><img src="teach9.jpg" alt="" height="450px"></div>
+
+                <div id="c6b2cont">
+                    <h1>The anti-all-in-one</h1><br>
+                    <p>Teachable’s API and integrations double down on our focus on <br> customizability. With Teachable you <br> can:</p><br>
+                    <p> * Automated tax filings <br><br>
+                        * Connect your favorite tools from outside <br> Teachable <br><br>
+                        * Enable seamless communication between your <br> Teachable products and your favorite marketing <br> and analytics tools</p>
+
+                </div>
+            
+            </div>
+
+            <div class="c8button"><button class="button1">Start for free</button></div>
+    </div>
+
+
+
+
+
+
+    <div class="container9">
+
+        <div class="c91">
+            <h1>Need help fast?</h1>
+        </div>
+        <div class="c92">
+             <p >Every big creator had to start somewhere. Our support resources are the launch pad you <br>need to succeed.
+            </p>
+        </div>
+
+
+        <div class="cimg">
+                <div class="c3items"><img src="https://assets-global.website-files.com/65393b768d06ee4c16d24a0b/653c513dcf2d1fc219bee74f_teachableu-teachable-webflow-template.svg" alt="" height="70px" width="70px"> <br>
+                <h1>teachable:u</h1><br>
+                <p>Marketing,video,course building <br> best practises-get  access to our <br> mini course library on those <br> topics and more.</p><br><br><p class="c3p">Learn more</p>
+                
+                
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="c3items"><img src="https://assets-global.website-files.com/65393b768d06ee4c16d24a0b/653c514cefe0c8de121eac02_teachableblog-teachable-webflow-template.svg" alt="" height="70px" width="70px">
+                    <h1>teachable:blog</h1><br>
+                    <p>You've got questions and the <br> answers are on our blog.You'll <br>find how-tos,creator interviews,<br>and much more.</p><br><br><br><p class="c3p">Learn more</p>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="c3items"><img src="https://assets-global.website-files.com/65393b768d06ee4c16d24a0b/653c513d3f55b8f0625dfe9c_teachablehq-teachable-webflow-template.svg" alt="" height="70px" width="70px">
+                    <h1>teachable:hq</h1><br>
+                    <p>Join over 10,000 of your peers <br> to network,trade strategies,and <br> share successes in our creator <br>community ,available to all paid <br>plan subscribers.</p><br><br><p class="c3p">Learn more</p>
+                </div>
+            </div>
+
+
+    </div>
+
+
+        <div>
+            <img src="https://assets-global.website-files.com/65393b768d06ee4c16d24a0b/653ab84a26c1d5a9e734d555_cooking-teachable-webflow-template-p-2000.jpg" alt="">
+        </div>
+
+
+    <div class="container10">
+        <div class="content">
+        <div class="c10d1">
+            <h1>Change your future</h1>
+        </div>
+        <div class="c10d2"><h3>with one click.</h3></div>
+        <div class="c10d3"><p>Try our (actually free) free plan today.</p></div>
+    </div>
+        <div class="c8button"><button class="button3">Start for free</button></div> 
+    </div>
+
+
+
+    <div class="container11">
+        <div>
+        <div class="c11d1">
+            <img src="https://assets-global.website-files.com/65393b768d06ee4c16d24a0b/65393dc0c6867e03a9baa122_teachable-logo-light.svg" alt="">
+            <br><br>
+                <div class="t22-1">Join the more than 100,000 creators who use Teachable to <br> share their knowledge. Easily create and sell courses,<br> coaching, and digital downloads with our powerful yet simple<br> no-code platform.
+                
+                   
+                    <div class="main-con-23">
+                        <div class="ul22-1">
+                            <ul class="li22-1">
+                                
+                                <li id="l22-1">Explore</li>
+                                <li>Features</li>
+                                <li>Pricing</li>
+                                <li>Examples</li>
+                                <li>Newssletter</li>
+                                <li>teachable:hq</li>
+                                <li>Podcast</li>
+                            </ul>
+                        </div>
+                   
+                        <div class="ul22-2">
+                            <ul class="li22-2">
+                                <li id="l22-2">Company</li>
+                                <li>Careers</li>
+                                <li>Blog</li>
+                                <li>Press</li>
+                                <li>Partners</li>
+                            </ul>
+                        </div>
+                        <div class="ul22-3">
+                            <ul class="li22-3">
+                                <li id="l22-3">Support</li>
+                                <li>Help Center</li>
+                                <li>Privacy policy</li>
+                                <li>Terms of Use</li>
+                                <li>Content Guidenlines</li>
+                                <li>House Rules</li>
+                                <li>Cookie Policy</li>
+                                <li>Ethics Line</li>
+                                <li>Aceessibility</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                
+                
+                </div>
+
+
+                <div class="text22-1">Copyright © 2024 Teachable, Inc. All rights reserved.</div>
+
+                </div> <!--    end -->
+    
+   
+</div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
